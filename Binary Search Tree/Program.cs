@@ -94,8 +94,24 @@ namespace Binary_Search_Tree
                 preorder(ptr.rightchild);
             }
         }
+        public void postorder(Node ptr) //Performs postorder traveral of the tree
+        {
+            if (ROOT == null)
+            {
+                Console.WriteLine("Tree is empty");
+                return;
+            }
+            if (ptr != null)
+            {
+                postorder(ptr.leftchild);
+                postorder(ptr.rightchild);
+                Console.WriteLine(ptr.info + "");
+            }
+        }
         static void Main(string[] args)
         {
+            Program x = new Program();
+            while
         }
     }
 }
