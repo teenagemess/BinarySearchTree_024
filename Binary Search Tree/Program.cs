@@ -23,7 +23,7 @@ namespace Binary_Search_Tree
     // a Node class consists of three things, the information, references to the right child, and references
 
 
-    internal class Program
+    class Program
     {
         public Node ROOT;
         public Program()
@@ -32,7 +32,17 @@ namespace Binary_Search_Tree
         }
         public void search(string element, ref Node parent, ref Node currentNode)
         {
-
+            //This function searchs the currentNode of the specified Node as well as the current Node of parentss 
+            currentNode = ROOT;
+            parent = null;
+            while((currentNode != null ) && (currentNode.info != element))
+            {
+                parent = currentNode;
+                if (string.Compare(element, currentNode.info) < 0)
+                    currentNode = currentNode.leftchild;
+                else
+                    currentNode = currentNode.rightchild;
+            }
         }
         static void Main(string[] args)
         {
