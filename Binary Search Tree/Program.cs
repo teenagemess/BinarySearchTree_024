@@ -82,7 +82,7 @@ namespace Binary_Search_Tree
             if (ptr != null)
             {
                 inorder(ptr.leftchild);
-                Console.Write(ptr.info + " ");
+                Console.Write(ptr.info + "  ");
                 inorder(ptr.rightchild);
             }
         }
@@ -95,7 +95,7 @@ namespace Binary_Search_Tree
             }
             if (ptr != null)
             {
-                Console.WriteLine(ptr.info + " ");
+                Console.WriteLine(ptr.info + "  ");
                 preorder(ptr.leftchild);
                 preorder(ptr.rightchild);
             }
@@ -111,7 +111,7 @@ namespace Binary_Search_Tree
             {
                 postorder(ptr.leftchild);
                 postorder(ptr.rightchild);
-                Console.WriteLine(ptr.info + "");
+                Console.WriteLine(ptr.info + "   ");
             }
         }
         static void Main(string[] args)
